@@ -5,5 +5,5 @@ if [ -e $name ]; then
     echo "The name is already exist"
 else 
     mkdir ./$name
-    echo "$name has created"
+    echo "$name has been created"
 fi

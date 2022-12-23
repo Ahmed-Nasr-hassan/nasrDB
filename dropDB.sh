@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-read -p "Enter Database name : " name
+read -p "Enter database name : " name
 if [ -e $name ]; then
     rm -r $name
     echo "$name has been deleted"

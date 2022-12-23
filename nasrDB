@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-
+starting_dir="$(pwd)"
 current_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 dbsDir="${current_dir}/DBs"
 
@@ -33,5 +33,6 @@ do
     *)
     echo "Not valid option"
     esac
-
+    echo '1) Create Database' '2) List Databases' '3) Connect To Databases' '4) Drop Database' '5) Exit'
 done
+cd $starting_dir

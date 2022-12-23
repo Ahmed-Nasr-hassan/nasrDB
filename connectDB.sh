@@ -33,7 +33,7 @@ function tableMenuFun {
         *)
         echo "Not valid option"
         esac
-
+        echo '1) Create Table' '2) List Tables' '3) Drop Table' '4) Insert into Table' '5) Select From Table' '6) Delete From Table' '7) Update Table' '8) Back'
     done
 }
 
