@@ -1,0 +1,37 @@
+#!/usr/bin/bash
+
+current_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+dbsDir="${current_dir}/DBs"
+
+if [ ! -d "${dbsDir}" ]; then
+  mkdir "${dbsDir}" 
+fi
+
+cd "${dbsDir}" 
+
+mainMenu=('Create Database' 'List Databases' 'Connect To Databases' 'Drop Database' 'Exit')
+
+select i in "${mainMenu[@]}";
+do
+    case $i in
+    'Create Database')
+        createDB.sh
+    ;;
+    'List Databases')
+        listDB.sh
+    ;;
+    'Connect To Databases') 
+        connectDB.sh
+    ;;
+    'Drop Database')
+        dropDB.sh
+    ;; 
+    'Exit')
+        echo "Good Bye"
+        break
+    ;;
+    *)
+    echo "Not valid option"
+    esac
+
+done
