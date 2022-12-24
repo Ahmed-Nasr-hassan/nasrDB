@@ -7,6 +7,5 @@ else
     touch ./$name
     touch ./$name'_MetaData'
     echo "$name has been created"
+    askForColumnsData.sh $name'_MetaData'
 fi
-
-#Ask about datatypes and primary key
