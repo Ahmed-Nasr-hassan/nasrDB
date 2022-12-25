@@ -10,7 +10,11 @@ do
         read -p "Add row data : " insertedRow
         checkResult=$(check.sh $tablename $insertedRow)
         echo $checkResult
-        # echo "$pk,$name,$datatype" >> ./$1
+        if [ $checkResult -eq 1 ]; then
+            echo "$insertedRow" >> ./$1
+        else
+            echo "Inputs should be equal to number of columns, matching datatypes and pk is unique"
+        fi
     ;;
     "Done")
         break
