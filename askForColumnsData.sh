@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 echo "Add columns properties one by one separated with spaces (name datatype if pk enter pk else don't enter anything)"
+echo "Available datatypes boolean str int"
 pkCounter=0
 select i in "Add Column" "Done" "Delete";
 do

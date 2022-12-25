@@ -9,7 +9,6 @@ do
     "Add Row")
         read -p "Add row data : " insertedRow
         checkResult=$(check.sh $tablename $insertedRow)
-        echo $checkResult
         if [ $checkResult -eq 1 ]; then
             echo "$insertedRow" >> ./$1
         else
