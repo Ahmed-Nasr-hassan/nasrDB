@@ -10,5 +10,5 @@ if [ ${#insertedRow[@]} != ${#columnNames[@]}  ]; then
 else
   checkValuesTypes=$(checkEachValueType.sh $1 $2)
   checkUniquePk=$(checkUniquePk.sh $1 $2)
-  echo $(($checkUniquePk * $checkValuesTypes))
+  echo $(($checkUniquePk * $checkValuesTypes ))
 fi

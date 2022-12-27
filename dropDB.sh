@@ -1,8 +1,12 @@
 #!/usr/bin/bash
 read -p "Enter database name : " name
-if [ -e $name ]; then
-    rm -r $name
-    echo "$name has been deleted"
+if [ $(checkRegex.sh "$name") == 1 ]; then 
+    if [ -e $name ]; then
+        rm -r $name
+        echo "$name has been deleted"
+    else 
+        echo "No database with name : $name"
+    fi
 else 
-    echo "No database with name : $name"
+    echo "Name shouldn't have regex or start with a number"
 fi

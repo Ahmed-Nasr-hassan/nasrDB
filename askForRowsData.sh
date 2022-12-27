@@ -2,7 +2,7 @@
 tablename=$1
 metaDataFile=$tablename"_MetaData"
 columnNames=($(cut -d, -f2 ./$metaDataFile))
-echo "Add rows data one by one separated with ',', current rows are : ${columnNames[@]} "
+echo "Add rows data one by one separated with ',', current columns are : ${columnNames[@]} "
 select i in "Add Row" "Done";
 do
     case $i in

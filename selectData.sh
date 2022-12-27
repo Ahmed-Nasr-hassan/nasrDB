@@ -33,7 +33,8 @@ case $operator in
 *)
     echo "Not valid operator"
 esac
-cat .temp.nasr #can add limit of view using head and tail commands
+# cat .temp.nasr #can add limit of view using head and tail commands
+column -s, -t .temp.nasr
 rm .temp.nasr
 # Select specific columns (In progress)
 # selectedColumnsIndex=$( getColumnsIndexes.sh $tablename $selectedColumns )
