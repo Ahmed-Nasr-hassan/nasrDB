@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 read -p "Update 'table name' : " tableName
 read -p "WHERE 'col,comparisonOperator,value' : " whereClause
-read -p "to 'col,newValue' : " colToNewValue
+read -p "SET 'col,newValue' : " colToNewValue
 if [ -e $tableName ]; then
     #add Condition here
     checkResult=$(checkNewValueAndWhere.sh $tableName $whereClause $colToNewValue)
