@@ -6,7 +6,7 @@ if [ -e $tableName ]; then
     #add Condition here
     checkResult=$(checkColumnsAndWhere.sh $tableName $columnNames $whereClause)
     if [ $checkResult -eq 1 ]; then
-        echo $(selectData.sh $tableName $columnNames $whereClause)
+        selectData.sh $tableName $columnNames $whereClause
     else
         echo "Some Invalid Inputs"
     fi
